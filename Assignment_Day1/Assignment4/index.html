@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai News</title>
+    <style>
+      .main {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .news-cont {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 25px;
+      }
+
+      .news-cont > div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .img-cont {
+        width: 100%;
+        height: 80%;
+        border-radius: 16px;
+        align-content: center;
+        background-color: rgb(221, 243, 243);
+        padding-block: 20px;
+      }
+
+      .img-cont img {
+        width: 55%;
+        max-height: 90%;
+      }
+
+      p {
+        color: #222222;
+        font-weight: bold;
+      }
+
+      @media (max-width: 767px) {
+        .news-cont {
+            flex-wrap: wrap;
+            align-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Masai In <span>News</span></h1>
+      <div class="news-cont">
+        <div>
+          <div class="img-cont">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/THE_WEEK_logo1.jpg/1200px-THE_WEEK_logo1.jpg"
+              alt="The Week"
+            />
+          </div>
+          <p>
+            Masai Sees 30% Increase In Student Placement Amid Market Jitters
+          </p>
+        </div>
+        <div>
+          <div class="img-cont">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/09/Businessworld_%28logo%29.png"
+              alt="BW Businessworld"
+            />
+          </div>
+          <p>JobTech Startup Masai School Raises $10 Million In Series B</p>
+        </div>
+        <div>
+          <div class="img-cont">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/23/CNBC_TV18_logo.png"
+              alt="CNBC TV18"
+            />
+          </div>
+          <p>Masai School targets five-fold revenue growth in three years</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

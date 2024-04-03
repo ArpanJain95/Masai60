@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        scroll-behavior: smooth;
+      }
+      .main-container {
+        margin: auto;
+        margin-bottom: 60px;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .nav-cont {
+        /* position: fixed; */
+        width: 100%;
+        margin-block: 20px;
+        background-color: #7a7373;
+        height: 50px;
+        align-content: center;
+      }
+
+      .nav-cont div {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .nav-cont select {
+        display: none;
+      }
+
+      .card-group {
+        width: 95%;
+        margin: auto;
+        /* margin-top: 100px; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .card-cont {
+        background-color: aliceblue;
+        display: flex;
+        padding: 5px;
+        gap: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .card-cont div:nth-child(1) {
+        width: 20%;
+        padding: 30px;
+        border: rgb(255, 255, 255) 4px solid;
+        border-radius: 20px 0px 0px 20px;
+      }
+
+      .card-cont > div > img {
+        width: 80%;
+      }
+
+      .card-cont div:nth-child(2) {
+        width: 80%;
+        margin: auto;
+      }
+
+      h1 {
+        margin: 10px 0 0 0;
+      }
+
+      a {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        align-content: center;
+        padding: 10px;
+      }
+
+      a:hover {
+        background-color: #ffffff;
+        border-radius: 12px;
+        color: #7a7373;
+      }
+
+      h2,
+      p {
+        color: #7a7373;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      @media (max-width: 767px) {
+        .nav-cont div {
+          display: none;
+        }
+
+        .nav-cont {
+          bottom: 0;
+          margin: 0;
+          position: fixed;
+        }
+
+        .nav-cont select {
+          display: block;
+          width: 100%;
+          height: 50px;
+          background-color: #7a7373;
+          color: #ffffff;
+          text-align: center;
+          font-size: 20px;
+        }
+
+        .card-cont {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .card-cont div:nth-child(1) {
+          height: 30%;
+          padding: 30px;
+          border: rgb(255, 255, 255) 4px solid;
+          border-radius: 20px 20px 20px 20px;
+        }
+
+        h1 {
+          margin: 10px 0 10px 0;
+        }
+      }
+
+      #home,
+      #education,
+      #skills,
+      #projects,
+      #contacts {
+        padding-top: 50px;
+        scroll-margin-top: 50px;
+      }
+
+      #home:target,
+      #education:target,
+      #skills:target,
+      #projects:target,
+      #contacts:target {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container" id="home">
+      <h1>My Portfolio</h1>
+      <div class="nav-cont">
+        <div>
+          <a href="#home">Home</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contacts">Contacts</a>
+        </div>
+        <select onchange="window.location.href=this.value;">
+          <option value="#home">Home</option>
+          <option value="#education">Education</option>
+          <option value="#skills">Skills</option>
+          <option value="#projects">Projects</option>
+          <option value="#contacts">Contacts</option>
+        </select>
+      </div>
+      <div class="card-group">
+        <div class="card-cont">
+          <div>
+            <img
+              src="https://www.iconpacks.net/icons/1/free-user-icon-244-thumb.png"
+              alt="Myself"
+            />
+          </div>
+          <div>
+            <h2>Home</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis, fuga necessitatibus, blanditiis voluptatem facilis in
+              asperiores ut autem temporibus nesciunt, sed soluta error commodi
+              fugiat quo aut quis quae eum?
+            </p>
+          </div>
+        </div>
+        <div class="card-cont" id="education">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2201/2201570.png"
+              alt="Education"
+            />
+          </div>
+          <div>
+            <h2>Education</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              deserunt possimus similique fuga quidem sit tempora earum
+              laudantium nam, at sunt aliquam totam natus atque ipsam tenetur
+              illum.
+            </p>
+          </div>
+        </div>
+        <div class="card-cont" id="skills">
+          <div>
+            <img
+              src="https://fsc-ccf.ca/wp-content/uploads/2023/05/Copy-of-Icon-Clusters_Digital-Skills-and-Tech.png"
+              alt="Skills"
+            />
+          </div>
+          <div>
+            <h2>Skills</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              deserunt possimus similique fuga quidem sit tempora earum
+              laudantium nam, at sunt aliquam totam natus atque ipsam tenetur
+              illum.
+            </p>
+          </div>
+        </div>
+        <div class="card-cont" id="projects">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/256/3045/3045733.png"
+              alt="Projects"
+            />
+          </div>
+          <div>
+            <h2>Projects</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+              ratione doloribus alias earum quisquam doloremque voluptates
+              architecto minus vitae molestiae, iste reiciendis esse distinctio,
+              ullam sint possimus totam vero aliquid, neque dolor a!
+            </p>
+          </div>
+        </div>
+        <div class="card-cont" id="contacts">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3157/3157945.png"
+              alt="Contact Us"
+            />
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+              nam quos. Totam in amet unde, cupiditate dolore ad a quis,
+              repudiandae necessitatibus ex perferendis ea.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

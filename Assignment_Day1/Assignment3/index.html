@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Investor</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            color: black;
+        }
+
+        .main-container {
+            width: 95%;
+            margin: auto;
+            margin-bottom: 200px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .board-mem-container {
+            margin-top: 40px;
+            padding: 30px;
+        }
+
+        .board-mem-container div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .board-mem-container img {
+            max-width: 250px;
+            min-width: 30%;
+        }
+
+        .strategic-investors {
+            width: 100%;
+            
+        }
+
+        .strategic-investors > div {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  
+            gap: 15px;
+        }
+
+        .investor-card {
+            width: 100%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .investor-card>img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .investor-card p {
+            margin: 0 10px 5px 10px;
+        }
+
+        .investor-card>img+p {
+            font-weight: bold;
+        }
+
+        .investor-card>p+p {
+            color: #544d4f;
+        }
+
+        .investor-card div {
+            width: 100%;
+            height: 48px;
+        }
+
+        .investor-card div img {
+            margin: auto;
+            width: auto;
+            height: 100%;
+        }
+        
+        @media (max-width: 767px) {
+            .strategic-investors > div {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 499px) {
+            .strategic-investors > div {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="board-mem-container">
+        <h1>Board Members</h1>
+        <div>
+          <img
+            src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg"
+            alt="India Quotient"
+          /><img
+            src="https://www.masaischool.com/images/our-investors/capria-logo.svg"
+            alt="CAPRIA"
+          /><img
+            src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg"
+            alt="OMIDYAR NETWORK INDIA"
+          />
+        </div>
+      </div>
+      <div class="strategic-investors">
+        <h1>Strategic Investors</h1>
+        <div>
+          <div class="investor-card">
+            <img
+              src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg"
+              alt="Vijay Sharma"
+            />
+            <p>Vijay Shekhar Sharma</p>
+            <p>Founder & CEO</p>
+            <div>
+                <img
+                  src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
+                  alt="Paytm Logo"
+                />
+            </div>
+          </div>
+          <div class="investor-card">
+            <img
+              src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png"
+              alt="Kunal Shah"
+            />
+            <p>Kunal Shah</p>
+            <p>Founder</p>
+            <div>
+                <img
+                  src="https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
+                  alt="Cred Logo"
+                />
+            </div>
+          </div>
+          <div class="investor-card">
+            <img
+              src="https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg"
+              alt="Amrish Rau"
+            />
+            <p>Amrish Rau</p>
+            <p>CEO</p>
+            <div>
+                <img
+                  src="https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
+                  alt="Pine Labs Logo"
+                />
+            </div>
+          </div>
+          <div class="investor-card">
+            <img
+              src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg"
+              alt="Sampad Swain"
+            />
+            <p>Sampad Swain</p>
+            <p>Co-Founder & CEO</p>
+            <div>
+                <img
+                  src="https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
+                  alt="Instamojo Logo"
+                />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
