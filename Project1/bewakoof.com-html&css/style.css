@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    border: border-box;
+    text-decoration: none;
+}
+
+/* topbar start */
+.topBar {
+    height: 27px;
+    background-color: #eeeeee;
+}
+
+.topBar-Cont {
+    width: 95%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topBar a {
+    color: #000000cc;
+    font-size: 10px;
+    margin-inline: 8px;
+}
+
+/* topbar end */
