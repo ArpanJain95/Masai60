@@ -227,14 +227,26 @@ fetch("data/db.json")
 
         // product card start
 
+        const sortedProducts = products.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+        const bestSeller = sortedProducts.slice(0, 5);
+        const bestSellerContainer = document.createElement("div")
+        bestSellerContainer.className = "bestSellerContainer"
+        const bestSellerHeading = document.createElement("p")
+        bestSellerHeading.textContent = "BESTSELLERS"
         const productContainer = document.createElement("div")
-        products.forEach(productData => {
-            const productCard = createProductCard(productData);
-            productContainer.appendChild(productCard);
+        productContainer.appendChild(bestSellerHeading)
+        productContainer.className = "productContainer"
+        bestSeller.forEach(productData => {
+            const productCont = document.createElement("a")
+            productCont.href = bestSeller.url
+            const productCard = createProductCard(productData, "home");
+            productCont.appendChild(productCard);
+            productContainer.appendChild(productCont);
         });
+        bestSellerContainer.append(bestSellerHeading, productContainer)
 
         // product card end
 
-        homeContainer.append(heroComp, widgetContainer, bannerNo1Container, trendingCateCont, productContainer)
+        homeContainer.append(heroComp, widgetContainer, bannerNo1Container, trendingCateCont, bestSellerContainer)
     })
     .catch(error => console.error("Error fetching data:", error));

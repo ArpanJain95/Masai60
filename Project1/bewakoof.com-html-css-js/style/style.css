@@ -265,7 +265,6 @@
 /* banner-comp3 end */
 
 /* trendingCategory start */
-
 .trendingCateCont {
     margin-top: 10px;
     font-weight: 700;
@@ -285,7 +284,40 @@
 .trendingCateCont img {
     width: 100%;
 }
-
 /* trendingCategory end */
+
+/* product card start */
+
+.bestSellerContainer {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0px;
+    background-image: url(https://images.bewakoof.com/web/bg-web-mc-land-page.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bestSellerContainer p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 16px 0 17px;
+}
+
+.productContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 25px;
+}
+
+.product-card {
+    /* width: 300px; */
+}
+
+.product-card img {
+    width: 100%;
+}
+
+/* product card end */
 
 /* home-container end */
