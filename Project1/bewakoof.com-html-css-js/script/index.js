@@ -1,3 +1,5 @@
+import { createProductCard } from '../script/productCard.js';
+
 fetch("data/db.json")
     .then(response => response.json())
     .then(data => {
@@ -9,6 +11,7 @@ fetch("data/db.json")
         const categories = data.categories;
         const wideBanners = data.wideBanners;
         const trendingCategories = data.trendingCategories;
+        const products = data.products
 
         // topbar start
         const topBar = document.getElementById("topBar");
@@ -84,14 +87,14 @@ fetch("data/db.json")
 
         const wishlistBtn = document.createElement("a");
         wishlistBtn.href = "./wishlist.html"
-        wishlistIcon = document.createElement("i")
+        const wishlistIcon = document.createElement("i")
         wishlistIcon.className = "fa-regular fa-heart"
 
         wishlistBtn.appendChild(wishlistIcon)
 
         const cartBtn = document.createElement("a");
         cartBtn.href = "./cart.html"
-        cartIcon = document.createElement("i");
+        const cartIcon = document.createElement("i");
         cartIcon.className = "fa-solid fa-bag-shopping"
 
         cartBtn.appendChild(cartIcon)
@@ -222,6 +225,16 @@ fetch("data/db.json")
         trendingCateCont.append(trendingHeading, trendingCateBanner)
         // trendingCategory end
 
-        homeContainer.append(heroComp, widgetContainer, bannerNo1Container, trendingCateCont)
+        // product card start
+
+        const productContainer = document.createElement("div")
+        products.forEach(productData => {
+            const productCard = createProductCard(productData);
+            productContainer.appendChild(productCard);
+        });
+
+        // product card end
+
+        homeContainer.append(heroComp, widgetContainer, bannerNo1Container, trendingCateCont, productContainer)
     })
     .catch(error => console.error("Error fetching data:", error));

@@ -276,6 +276,7 @@
     {
       "id": 1,
       "name": "Stay Hydrated Back Graphic Printed",
+      "officialCate": "BEWAKOOF",
       "gender": "Women",
       "category": "Oversized Fit",
       "color": "Black",
@@ -298,6 +299,7 @@
       "gender": "Men",
       "category": "Oversized Fit",
       "color": "White",
+      "rating": "4.5",
       "discount%": 62,
       "price": 599,
       "material": "100% Cotton",
@@ -334,6 +336,7 @@
       "gender": "Women",
       "category": "Oversized Fit",
       "color": "Blue",
+      "rating": "4.8",
       "discount%": 56,
       "price": 649,
       "material": "100% Cotton",
@@ -348,6 +351,7 @@
     {
       "id": 5,
       "name": "",
+      "officialCate": "BEWAKOOF",
       "gender": "Women",
       "category": "Oversized Dress",
       "color": "Grey",
@@ -369,6 +373,7 @@
       "gender": "Women",
       "category": "Oversized Dress",
       "color": "Brown",
+      "rating": "5",
       "discount%": 43,
       "price": 1049,
       "material": "100% Cotton",
@@ -405,8 +410,154 @@
       "gender": "Men",
       "category": "T-Shirts",
       "color": "White",
+      "rating": "4",
       "discount%": 50,
       "price": 499,
+      "material": "100% Cotton",
+      "size": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/men-s-white-t-shirt-105-1702967985-1.jpg",
+        "https://images.bewakoof.com/t1080/white-half-sleeve-t-shirt-105-1666332517-2.jpg",
+        "https://images.bewakoof.com/t1080/white-half-sleeve-t-shirt-105-1666332528-4.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "",
+      "officialCate": "BEWAKOOF HEAVY DUTY 1.0",
+      "gender": "Women",
+      "category": "Super Loose Fit Joggers",
+      "color": "Green",
+      "rating": "4.4",
+      "discount%": 45,
+      "price": 999,
+      "material": "THICK PREMIUM FABRIC",
+      "size": ["XS", "S", "L", "XL", "2XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/women-s-green-super-loose-fit-joggers-605587-1710767016-1.jpg",
+        "https://images.bewakoof.com/t1080/women-s-green-super-loose-fit-joggers-605587-1710767016-1.jpg",
+        "https://images.bewakoof.com/t1080/women-s-green-super-loose-fit-joggers-605587-1710767027-3.jpg",
+        "https://images.bewakoof.com/t1080/women-s-green-super-loose-fit-joggers-605587-1710767049-10.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Smashed It Graphic Printed",
+      "officialCate": "OFFICIAL LOONEY TUNES MERCHANDISE",
+      "gender": "Women",
+      "category": "Oversized Fit",
+      "color": "Pink",
+      "rating": "4.6",
+      "discount%": 57,
+      "price": 599,
+      "material": "SLUB JERSEY FABRIC",
+      "size": ["XS", "X", "M", "L", "XL", "2XL", "3XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/women-s-pink-smashed-it-graphic-printed-oversized-t-shirt-636434-1712758724-1.jpg",
+        "https://images.bewakoof.com/t1080/women-s-pink-smashed-it-graphic-printed-oversized-t-shirt-636434-1712758729-2.jpg",
+        "https://images.bewakoof.com/t1080/women-s-pink-smashed-it-graphic-printed-oversized-t-shirt-636434-1712758738-4.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Tom & Jerry Graphic Printed",
+      "officialCate": "BEWAKOOF TOM & JERRY MERCHANDISE",
+      "gender": "Men",
+      "category": "Oversized Co-ordinates",
+      "color": "Brown",
+      "rating": "4.4",
+      "discount%": 56,
+      "price": 1524,
+      "size": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/men-printed-co-ord-set-1-619995-1701340265-1.jpg",
+        "https://images.bewakoof.com/t1080/men-printed-co-ord-set-1-619995-1701340265-1.jpg",
+        "https://images.bewakoof.com/t1080/men-printed-co-ord-set-1-619995-1701340281-4.jpg",
+        "https://images.bewakoof.com/t1080/men-printed-co-ord-set-1-619995-1701340281-4.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Mickey Graphic Printed",
+      "officialCate": "BEWAKOOF DISNEY MERCHANDISE",
+      "gender": "Women",
+      "category": "Oversized Dress",
+      "color": "Black",
+      "rating": "4",
+      "discount%": 54,
+      "price": 699,
+      "material": "THICK PREMIUM FABRIC",
+      "size": ["XS", "S", "M", "L"],
+      "images": [
+        "https://images.bewakoof.com/t1080/women-s-black-mickey-graphic-printed-oversized-t-shirt-dress-589799-1709213949-1.jpg",
+        "https://images.bewakoof.com/t1080/women-s-black-mickey-graphic-printed-oversized-dress-589799-1701241313-2.jpg",
+        "https://images.bewakoof.com/t1080/women-s-black-mickey-graphic-printed-oversized-dress-589799-1701241330-5.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "",
+      "officialCate": "BEWAKOOF",
+      "gender": "Women",
+      "category": "Oversized Dress",
+      "color": "Pink",
+      "rating": "4.9",
+      "discount%": 67,
+      "price": 449,
+      "material": "THICK PREMIUM FABRIC",
+      "size": ["XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/women-s-pink-dress-2-584764-1688995598-1.jpg",
+        "https://images.bewakoof.com/t1080/women-s-pink-dress-2-584764-1688995604-2.jpg",
+        "https://images.bewakoof.com/t1080/women-s-pink-dress-2-584764-1688995620-5.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Striped",
+      "officialCate": "BEWAKOOF",
+      "gender": "Men",
+      "category": "Oversized Shirt",
+      "color": "Blue",
+      "rating": "4.6",
+      "discount%": 45,
+      "price": 899,
+      "material": "FINE TEXTURE FABRIC",
+      "size": ["S", "M", "L", "XL", "2XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/men-s-blue-striped-oversized-shirt-597301-1704957705-1.jpg",
+        "https://images.bewakoof.com/t1080/men-s-blue-striped-oversized-shirt-597301-1704957710-2.jpg",
+        "https://images.bewakoof.com/t1080/men-s-blue-striped-oversized-shirt-597301-1704957710-2.jpg",
+        "https://images.bewakoof.com/t1080/men-s-blue-striped-oversized-shirt-597301-1704957726-5.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Modern Noise Checked",
+      "officialCate": "BEWAKOOF",
+      "gender": "Women",
+      "category": "Oversized Fit",
+      "color": "Black and Grey",
+      "rating": "4.5",
+      "discount%": 50,
+      "price": 799,
+      "size": ["XS", "S", "M", "L", "XL", "2XL"],
+      "images": [
+        "https://images.bewakoof.com/t1080/women-oversized-printed-shirt-9-617275-1706769000-1.jpg",
+        "https://images.bewakoof.com/t1080/women-oversized-printed-shirt-9-617275-1706769006-2.jpg",
+        "https://images.bewakoof.com/t1080/women-oversized-printed-shirt-9-617275-1706769016-5.jpg,"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Lead Typography",
+      "officialCate": "BEWAKOOF",
+      "gender": "Women",
+      "category": "Oversized Shirt",
+      "color": "White",
+      "rating": "5",
+      "discount%": 50,
+      "price": 799,
       "material": "100% Cotton",
       "size": ["S", "M", "L", "XL", "2XL", "3XL"],
       "images": [
