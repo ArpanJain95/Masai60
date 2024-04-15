@@ -5,29 +5,44 @@ function createProductCard(productData, cardVersion) {
   const productImage = document.createElement("img");
   productImage.src = productData.images[0];
   productImage.alt = productData.name;
-  card.appendChild(productImage);
+
+  const officialCategory = document.createElement("h3");
+  officialCategory.textContent = "Bewakoof";
+
+  const titleContainer = document.createElement("div");
+  titleContainer.className = "titleContainer";
 
   const heartIcon = document.createElement("i");
   heartIcon.className = "far fa-heart";
   heartIcon.addEventListener("click", () => {
-
     console.log("Product added to wishlist:", productData.name);
   });
-  card.appendChild(heartIcon);
 
-  const title = document.createElement("div");
-  title.textContent = `${productData.gender}'s ${productData.color} ${productData.name} ${productData.category}`;
-  card.appendChild(title);
+  const title = document.createElement("h2");
+  const fullTitle = `${productData.gender}'s ${productData.color} ${productData.name} ${productData.category}`;
+  const maxLength = 20;
+  title.textContent =
+    fullTitle.length > maxLength
+      ? `${fullTitle.slice(0, maxLength)}...`
+      : fullTitle;
+
+  titleContainer.append(title, heartIcon);
+  card.append(productImage, officialCategory, titleContainer);
 
   if (cardVersion === "home") {
-    const officialCategory = document.createElement("div");
-    officialCategory.textContent =
-      "Official Category: " + productData.officialCate;
-    card.appendChild(officialCategory);
+    const priceAndDiscount = document.createElement("div");
+    priceAndDiscount.classList = "priceAndDiscount";
 
     const discountedPrice = document.createElement("div");
-    discountedPrice.textContent = "Discounted Price: $" + productData.price;
-    card.appendChild(discountedPrice);
+    const rupeeSymbol = document.createElement("span");
+    rupeeSymbol.textContent = "\u20B9";
+    rupeeSymbol.classList.add("rupee-symbol");
+
+    const priceValue = document.createElement("span");
+    priceValue.textContent = productData.price;
+    priceValue.classList.add("product-price");
+
+    discountedPrice.append(rupeeSymbol, priceValue)
 
     const mrp = document.createElement("div");
     const discountedPriceValue = productData.price;
@@ -35,16 +50,15 @@ function createProductCard(productData, cardVersion) {
     const mrpValue = Math.round(
       discountedPriceValue / (1 - discountedPercentage / 100)
     );
-    mrp.textContent = "MRP: $" + mrpValue;
+    mrp.textContent = "\u20B9" + mrpValue;
     mrp.style.textDecoration = "line-through";
-    card.appendChild(mrp);
 
     const discountPercentage = document.createElement("div");
-    discountPercentage.textContent =
-      "Discount: " + productData["discount%"] + "%";
-    card.appendChild(discountPercentage);
-  } else if (cardVersion === "products") {
+    discountPercentage.textContent = productData["discount%"] + "% OFF";
 
+    priceAndDiscount.append(discountedPrice, mrp, discountPercentage);
+    card.appendChild(priceAndDiscount);
+  } else if (cardVersion === "products") {
     const rating = document.createElement("div");
     rating.textContent = "Rating: " + productData.rating;
     card.appendChild(rating);
