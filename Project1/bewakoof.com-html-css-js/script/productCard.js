@@ -7,7 +7,7 @@ function createProductCard(productData, cardVersion) {
   productImage.alt = productData.name;
 
   const officialCategory = document.createElement("h3");
-  officialCategory.textContent = "Bewakoof";
+  officialCategory.textContent = "Bewakoof®";
 
   const titleContainer = document.createElement("div");
   titleContainer.className = "titleContainer";
@@ -31,16 +31,17 @@ function createProductCard(productData, cardVersion) {
 
   if (cardVersion === "home") {
     const priceAndDiscount = document.createElement("div");
-    priceAndDiscount.classList = "priceAndDiscount";
+    priceAndDiscount.className = "priceAndDiscount";
 
     const discountedPrice = document.createElement("div");
+    discountedPrice.className = "discountedPrice"
     const rupeeSymbol = document.createElement("span");
     rupeeSymbol.textContent = "\u20B9";
-    rupeeSymbol.classList.add("rupee-symbol");
+    rupeeSymbol.className = "rupee-symbol";
 
     const priceValue = document.createElement("span");
     priceValue.textContent = productData.price;
-    priceValue.classList.add("product-price");
+    priceValue.className = "price-value";
 
     discountedPrice.append(rupeeSymbol, priceValue)
 
@@ -52,9 +53,11 @@ function createProductCard(productData, cardVersion) {
     );
     mrp.textContent = "\u20B9" + mrpValue;
     mrp.style.textDecoration = "line-through";
+    mrp.className = "mrp"
 
     const discountPercentage = document.createElement("div");
     discountPercentage.textContent = productData["discount%"] + "% OFF";
+    discountPercentage.className = "discountPercentage"
 
     priceAndDiscount.append(discountedPrice, mrp, discountPercentage);
     card.appendChild(priceAndDiscount);

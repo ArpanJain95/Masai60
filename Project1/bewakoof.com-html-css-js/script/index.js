@@ -1,4 +1,5 @@
 import { createProductCard } from '../script/productCard.js';
+import { footer } from '../script/footer.js';
 
 fetch("data/db.json")
     .then(response => response.json())
@@ -244,9 +245,15 @@ fetch("data/db.json")
             productContainer.appendChild(productCont);
         });
         bestSellerContainer.append(bestSellerHeading, productContainer)
-
         // product card end
 
-        homeContainer.append(heroComp, widgetContainer, bannerNo1Container, trendingCateCont, bestSellerContainer)
+        // footer start
+        const footerContainer = document.createElement("div");
+        const footerCont = footer();
+        footerContainer.appendChild(footerCont);
+
+        // footer end
+
+        homeContainer.append(heroComp, widgetContainer, bannerNo1Container, trendingCateCont, bestSellerContainer, footerContainer)
     })
     .catch(error => console.error("Error fetching data:", error));
