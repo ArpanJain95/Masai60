@@ -582,5 +582,14 @@
         "https://images.bewakoof.com/t1080/white-half-sleeve-t-shirt-105-1666332528-4.jpg"
       ]
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Binod",
+      "mobileNo": "9876543211",
+      "emailID": "binod@khalbalipur.com",
+      "password": "binod@123"
+    }
   ]
 }

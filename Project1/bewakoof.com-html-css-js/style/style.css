@@ -114,7 +114,8 @@
     padding-right: 10px;
 }
 
-#mainNavbar-right-cont p {
+#mainNavbar-right-cont p,
+#seperatorP {
     font-size: 25px;
     font-weight: 200;
     color: #000;
@@ -142,6 +143,10 @@
     background-color: transparent;
     font-size: 12px;
     line-height: 1.5;
+}
+
+#mainNavSearch input:focus {
+    outline: none;
 }
 
 #mainNavMyAccount a {
@@ -478,3 +483,19 @@
 /* footer end */
 
 /* home-container end */
+
+/* loginComponent start */
+
+#login-Comp {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    align-items: center;
+    text-align: center;
+}
+
+/* loginComponent end */
