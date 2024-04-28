@@ -1,4 +1,7 @@
 const navbarWraper = document.getElementById("navbar");
+const mainWraper = document.getElementById("root");
+
+// navbar
 navbarWraper.innerHTML = `
     <div>
         <h1>Product Listing Page</h1>
@@ -7,6 +10,7 @@ navbarWraper.innerHTML = `
     </div>
     `
 
+// navbar search, select and sort functionality
 const searchQuery = navbarWraper.querySelector("#searchQuery");
 const searchInput = document.createElement("input");
 searchInput.placeholder = "Search products...";
@@ -43,6 +47,7 @@ sortedvalue.addEventListener("change", handleSearch);
 
 let productsData = [];
 
+// function to handle and render search, category select and price sort
 async function handleSearch() {
     const searchTerm = searchInput.value.toLowerCase();
     const sortBy = sortedvalue.value;
@@ -67,12 +72,7 @@ async function handleSearch() {
     productsCard(sortedProducts);
 }    
 
-function handleSort() {
-    
-}
-
-const mainWraper = document.getElementById("root");
-
+// function to fetch product data
 async function dataFetch(category) {
     const endPoint = category ? `products/category/${category}` : `products`
     try {
@@ -85,6 +85,7 @@ async function dataFetch(category) {
     }
 };
 
+// function to create product card
 function productsCard(productsData) {
     const productsWrapper = document.createElement('div');
     productsWrapper.id = "productsWrapper"
