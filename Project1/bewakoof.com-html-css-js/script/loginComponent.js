@@ -1,4 +1,4 @@
-import { dataFetch } from "../script/dataFetch.js";
+import { signUpCont } from "./signUpForm.js";
 
 function loginComponent() {
   const loginComp = document.createElement("div");
@@ -6,21 +6,35 @@ function loginComponent() {
 
   const loginDivLeft = createLoginDivLeft();
   const loginDivRight = createLoginDivRight();
-  const otpForm = openOTPPopup();
-
-  displayLoginForm(true);
+  
+  loginComp.append(loginDivLeft, loginDivRight);
+  
+  const loginForm = loginDivRight.querySelector("#loginForm");
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const mobileNumberInput = document.getElementById("mobileNumberInput");
+    const mobileNumber = mobileNumberInput.value;
+    
+    const userData = await userDataFetch();
+    
+    const userExists = userData.find((user) => user.mobileNo === mobileNumber);
+    
+    if (userExists) {
+      alert("Mobile number exists");
+      loginDivLeft.remove();
+      loginDivRight.remove();
+      setTimeout(genrateOTP, 6000)
+      const otpForm = openOTPPopup(userExists);
+      loginComp.appendChild(otpForm);
+    } else {
+      loginDivLeft.remove();
+      loginDivRight.remove();
+      const signUpForm = signUpCont(mobileNumber)
+      loginComp.append(signUpForm);
+    }
+  });
 
   return loginComp;
-
-  function displayLoginForm(showLoginForm) {
-    if (showLoginForm) {
-        loginComp.innerHTML = "";
-        loginComp.append(loginDivLeft, loginDivRight);
-    } else {
-        loginComp.innerHTML = "";
-        loginComp.appendChild(otpForm);
-    }
-  };
 }
 
 function createLoginDivLeft() {
@@ -48,49 +62,29 @@ function createLoginDivRight() {
                     <img src="https://images.bewakoof.com/web/india-flag-round-1639566913.png" alt="India flag">
                     <span>+91</span>
                 </div>
-                <input type="text" id="mobileNumberInput" placeholder="Enter Mobile Number">
+                <input type="tel" id="mobileNumberInput" placeholder="Enter Mobile Number" maxlength="10">
             </div>
             <button type="submit">CONTINUE</button>
             <p>By creating an account or logging in, you agree with Bewakoof®'s Terms and Conditions and Privacy Policy.</p>
         </form>
     `;
 
-  const loginForm = loginDivRight.querySelector("#loginForm");
-  loginForm.addEventListener("submit", handleLoginSubmit);
-
   return loginDivRight;
 }
 
-async function handleLoginSubmit(event) {
-  event.preventDefault();
-  const mobileNumberInput = document.getElementById("mobileNumberInput");
-  const mobileNumber = mobileNumberInput.value;
-
-  const userData = await userDataFetch();
-
-  const userExists = userData.some((user) => user.mobileNo === mobileNumber);
-
-  if (userExists) {
-    alert("Mobile number exists");
-    displayLoginForm(false);
-    openOTPPopup(mobileNumber);
-  } else {
-    alert("Mobile number dose not exists");
-  }
-}
-
-async function openOTPPopup(number) {
+function openOTPPopup(userlogingin) {
+  console.log(userlogingin);
   const otpForm = document.createElement("div");
   otpForm.id = "otpForm";
   otpForm.innerHTML = `
         <h2>Verify with OTP</h2>
         <form>
             <label>Sent to</label>
-            <input type="text" placeholder=${number} disabled>
+            <input type="text" placeholder=${userlogingin.mobileNo} disabled>
         </form>
         <div>
             <p>Enter OTP</p>
-            <form>
+            <form id="otpInput">
                 <div class="otp-box">
                     <input name="otp1" type="tel" autocomplete="off" class="otpInput undefined " tabindex="1" maxlength="1" placeholder="" value="">
                     <input name="otp2" type="tel" autocomplete="off" class="otpInput undefined " tabindex="2" maxlength="1" placeholder="" value="">
@@ -98,17 +92,63 @@ async function openOTPPopup(number) {
                     <input name="otp4" type="tel" autocomplete="off" class="otpInput undefined " tabindex="4" maxlength="1" placeholder="" value="">
                 </div>
                 <div>
-                    <button>
-                        RESEND OTP
-                    </button>
+                    <button id="resendOTP">RESEND OTP</button>
                 </div>
-                <button disabled type="submit">Login</button>
+                <button id="loginButton" type="submit">Login</button>
             </form>
         </div>
         `;
-  document.body.appendChild(otpForm);
+        const otpInput = otpForm.querySelector("#otpInput");
+        const resendOTPBtn = otpForm.querySelector("#resendOTP");
+        
+        otpInput.addEventListener("submit", function(event) {
+          event.preventDefault();
+          const otp1 = otpInput.elements["otp1"].value;
+          const otp2 = otpInput.elements["otp2"].value;
+          const otp3 = otpInput.elements["otp3"].value;
+          const otp4 = otpInput.elements["otp4"].value;
+          const enteredOTP = otp1+otp2+otp3+otp4;
+        
+          if (enteredOTP == otp) {
+            // logic for loging in
+            const token = genrateToken();
+            const userToken = {
+              token: token,
+              user: userlogingin
+            };
+            localStorage.setItem("userToken", JSON.stringify(userToken));
+            window.location.href = "index.html";
+            console.log("Entered OTP", enteredOTP, "is correct");
+            otp = undefined;
+          } else {
+            console.log("wrong otp");
+          }
+        });
+
+        resendOTPBtn.addEventListener("click", function(event) {
+          event.preventDefault();
+          otp = undefined;
+          genrateOTP()
+        })
 
   return otpForm;
+}
+
+let otp;
+
+function genrateOTP() {
+  otp = Math.floor(Math.random() * 9000) + 1000;
+  alert (otp);
+}
+
+function genrateToken() {
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const tokenLength = 32;
+  let token = "";
+  for (let i=0; i<tokenLength; i++){
+    token += characters.charAt(Math.floor(Math.random()*characters.length));
+  }
+  return token;
 }
 
 async function userDataFetch() {

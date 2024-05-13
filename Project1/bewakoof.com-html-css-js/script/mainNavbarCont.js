@@ -1,4 +1,4 @@
-function mainNavbarCont(mainNavbarLinks, isLoginPage) {
+function mainNavbarCont(mainNavbarLinks, isLoginPage, token, user) {
   const mainNavbarContainer = document.createElement("div");
   mainNavbarContainer.id = "mainNavbar-container";
   const mainNavbarLeftCont = document.createElement("div");
@@ -44,12 +44,36 @@ function mainNavbarCont(mainNavbarLinks, isLoginPage) {
   mainNavSearch.appendChild(mainNavSearchForm);
 
   const mainNavMyAccount = document.createElement("div");
-  mainNavMyAccount.id = "mainNavMyAccount"
-  if(!isLoginPage){
+  mainNavMyAccount.id = "mainNavMyAccount";
+  // console.log(isLoginPage, token);
+  if(!isLoginPage && !token && !user){
       const loginBtn = document.createElement("a");
       loginBtn.href = "./login.html";
       loginBtn.textContent = "Login";
       mainNavMyAccount.appendChild(loginBtn)
+  } else if(isLoginPage) {
+    const removeLogin = document.createElement("div");
+    mainNavMyAccount.appendChild(removeLogin);
+  } else {
+    const profileCont = document.createElement("div");
+    profileCont.className = "dropdown";
+    profileCont.innerHTML = `
+      <button class="dropbtn fa-regular fa-user"></button>
+      <div class="dropdown-content" style="left:-100%;">
+        <button style="font-style: italic; color: grey;">Hi, ${user.name}</button>
+        <button>My Cart</button>
+        <button id="logoutBtn">Log Out</button>
+      </div>
+      `
+      const logoutBtn = profileCont.querySelector("#logoutBtn");
+      logoutBtn.addEventListener("click", handleLogout);
+
+    mainNavMyAccount.append(profileCont);
+  }
+
+  function handleLogout () {
+    localStorage.removeItem("userToken");
+    window.location.href = "index.html";
   }
 
   const wishlistBtn = document.createElement("a");

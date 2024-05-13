@@ -485,7 +485,6 @@
 /* home-container end */
 
 /* loginComponent start */
-
 #login-Comp {
     width: 100%;
     height: 100%;
@@ -497,5 +496,51 @@
     align-items: center;
     text-align: center;
 }
-
 /* loginComponent end */
+
+/* userMenu start */
+
+.dropbtn {
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content button {
+    color: black;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    justify-content: left;
+  }
+  
+  .dropdown-content button:hover {
+      background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* userMenu end */

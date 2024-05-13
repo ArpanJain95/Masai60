@@ -16,7 +16,14 @@ Promise.all([
     dataFetch('products')
 ])
 .then(([topBarLinks, topBarRightLinks, mainNavbarLinks, bottomBarLinks, heroBanners, categories, wideBanners, trendingCategories, products]) => {
-    
+  let token, user;
+  const userTokenString = localStorage.getItem("userToken");
+  if(userTokenString) {
+    const userToken = JSON.parse(userTokenString);
+    token = userToken.token;
+    user = userToken.user;
+  }
+  
     // topbar start
     const topBar = document.getElementById("topBar");
     const topBarContainer = topBarCont(topBarLinks, topBarRightLinks);
@@ -25,7 +32,7 @@ Promise.all([
 
     // mainNavbar start
     const mainNavbar = document.getElementById("mainNavbar");
-    const mainNavbarContainer = mainNavbarCont(mainNavbarLinks, false);
+    const mainNavbarContainer = mainNavbarCont(mainNavbarLinks, false, token, user);
     mainNavbar.appendChild(mainNavbarContainer);
     // mainNavbar end
     
@@ -181,7 +188,7 @@ Promise.all([
     // home-container end
     
     // footer start
-    const footerContainer = document.createElement("div");
+    const footerContainer = document.getElementById("footer");
     const footerCont = footer();
     footerContainer.appendChild(footerCont);
     
@@ -193,7 +200,6 @@ Promise.all([
       bannerNo1Container,
       trendingCateCont,
       bestSellerContainer,
-      footerContainer
     );
 })
 .catch(error => console.error(error));

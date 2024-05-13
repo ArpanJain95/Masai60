@@ -284,7 +284,15 @@
       "discount%": 60,
       "price": 519,
       "material": "100% Cotton",
-      "size": ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-black-stay-hydrated-back-graphic-printed-oversized-t-shirt-492911-1708436835-1.jpg",
@@ -304,7 +312,13 @@
       "discount%": 62,
       "price": 599,
       "material": "100% Cotton",
-      "size": ["M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/men-s-white-vengeance-graphic-printed-oversized-t-shirt-624560-1700112992-1.jpg",
@@ -324,7 +338,15 @@
       "discount%": 61,
       "price": 479,
       "material": "100% Cotton",
-      "size": ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-black-order-of-the-phoenix-graphic-printed-oversized-t-shirt-589279-1708436818-1.jpg",
@@ -343,7 +365,15 @@
       "discount%": 56,
       "price": 649,
       "material": "100% Cotton",
-      "size": ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-blue-stardust-soul-graphic-printed-oversized-t-shirt-580622-1708349628-1.jpg",
@@ -363,7 +393,15 @@
       "discount%": 58,
       "price": 534,
       "material": "THICK PREMIUM FABRIC",
-      "size": ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-grey-oversized-dress-582067-1708519423-1.jpg",
@@ -382,7 +420,10 @@
       "discount%": 43,
       "price": 1049,
       "material": "100% Cotton",
-      "size": ["M", "L"],
+      "size": [
+        "M",
+        "L"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-brown-mickey-the-original-graphic-printed-oversized-t-shirt-dress-546192-1700842684-1.jpg",
@@ -401,7 +442,14 @@
       "rating": "4.5",
       "discount%": 50,
       "price": 1499,
-      "size": ["XS", "S", "M", "L", "XL", "2XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-orange-super-loose-fit-co-ordinates-628243-1712568076-1.jpg",
@@ -421,7 +469,14 @@
       "discount%": 50,
       "price": 499,
       "material": "100% Cotton",
-      "size": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/men-s-white-t-shirt-105-1702967985-1.jpg",
@@ -440,7 +495,13 @@
       "discount%": 45,
       "price": 999,
       "material": "THICK PREMIUM FABRIC",
-      "size": ["XS", "S", "L", "XL", "2XL"],
+      "size": [
+        "XS",
+        "S",
+        "L",
+        "XL",
+        "2XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-green-super-loose-fit-joggers-605587-1710767016-1.jpg",
@@ -460,7 +521,15 @@
       "discount%": 57,
       "price": 599,
       "material": "SLUB JERSEY FABRIC",
-      "size": ["XS", "X", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "XS",
+        "X",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-pink-smashed-it-graphic-printed-oversized-t-shirt-636434-1712758724-1.jpg",
@@ -478,7 +547,14 @@
       "rating": "4.4",
       "discount%": 56,
       "price": 1524,
-      "size": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/men-printed-co-ord-set-1-619995-1701340265-1.jpg",
@@ -498,7 +574,12 @@
       "discount%": 54,
       "price": 699,
       "material": "THICK PREMIUM FABRIC",
-      "size": ["XS", "S", "M", "L"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-black-mickey-graphic-printed-oversized-t-shirt-dress-589799-1709213949-1.jpg",
@@ -517,7 +598,9 @@
       "discount%": 67,
       "price": 449,
       "material": "THICK PREMIUM FABRIC",
-      "size": ["XL"],
+      "size": [
+        "XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-s-pink-dress-2-584764-1688995598-1.jpg",
@@ -536,7 +619,13 @@
       "discount%": 45,
       "price": 899,
       "material": "FINE TEXTURE FABRIC",
-      "size": ["S", "M", "L", "XL", "2XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/men-s-blue-striped-oversized-shirt-597301-1704957705-1.jpg",
@@ -555,7 +644,14 @@
       "rating": "4.5",
       "discount%": 50,
       "price": 799,
-      "size": ["XS", "S", "M", "L", "XL", "2XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/women-oversized-printed-shirt-9-617275-1706769000-1.jpg",
@@ -574,7 +670,14 @@
       "discount%": 50,
       "price": 799,
       "material": "100% Cotton",
-      "size": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
       "url": "./",
       "images": [
         "https://images.bewakoof.com/t1080/men-s-white-t-shirt-105-1702967985-1.jpg",
@@ -589,7 +692,24 @@
       "name": "Binod",
       "mobileNo": "9876543211",
       "emailID": "binod@khalbalipur.com",
-      "password": "binod@123"
+      "password": "binod@123",
+      "receiveUpdates": "on"
+    },
+    {
+      "id": 2,
+      "name": "Raju",
+      "mobileNo": "1123456789",
+      "emailID": "raju@25dinmedouble.com",
+      "password": "raju@420",
+      "receiveUpdates": "on"
+    },
+    {
+      "name": "ashish",
+      "mobileNo": "8668686686",
+      "emailID": "ashish@test.com",
+      "password": "1234567899",
+      "receiveUpdates": "on",
+      "id": 3
     }
   ]
 }
