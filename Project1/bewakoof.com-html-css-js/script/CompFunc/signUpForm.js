@@ -14,7 +14,7 @@ function signUpCont (mobileNumber) {
                         <input type="text" placeholder="Name" name="name">
                     </div>
                     <div className="signUpMobile">
-                        <input type="text" placeholder="Mobile" name="mobileNo">
+                        <input type="text" placeholder="Mobile" name="mobileNo" value="${mobileNumber}">
                     </div>
                     <div className="signUpEmailId">
                         <input type="text" placeholder="Email Id" name="emailID">

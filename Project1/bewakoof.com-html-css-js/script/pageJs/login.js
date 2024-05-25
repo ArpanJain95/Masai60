@@ -1,7 +1,7 @@
-import { topBarCont } from "../script/topBarCont.js";
-import { dataFetch } from "../script/dataFetch.js";
-import { mainNavbarCont } from "../script/mainNavbarCont.js";
-import { loginComponent } from "../script/loginComponent.js";
+import { topBarCont } from "../CompFunc/topBarCont.js";
+import { dataFetch } from "../CompFunc/dataFetch.js";
+import { mainNavbarCont } from "../CompFunc/mainNavbarCont.js";
+import { loginComponent } from "../CompFunc/loginComponent.js";
 
 const loginContainer = document.getElementById("login-cont");
 Promise.all([

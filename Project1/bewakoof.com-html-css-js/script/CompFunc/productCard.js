@@ -1,5 +1,8 @@
+import { addToCartButton } from "./addToCart.js";
+
 function createProductCard(productData, cardVersion) {
-  const card = document.createElement("div");
+  const card = document.createElement("a");
+  card.href = `./productDetail.html?id=${productData.id}`
   card.className = "product-card";
 
   const productImage = document.createElement("img");
@@ -47,7 +50,7 @@ function createProductCard(productData, cardVersion) {
 
     const mrp = document.createElement("div");
     const discountedPriceValue = productData.price;
-    const discountedPercentage = productData["discount%"];
+    const discountedPercentage = productData["discountPercentage"];
     const mrpValue = Math.round(
       discountedPriceValue / (1 - discountedPercentage / 100)
     );
@@ -56,7 +59,7 @@ function createProductCard(productData, cardVersion) {
     mrp.className = "mrp"
 
     const discountPercentage = document.createElement("div");
-    discountPercentage.textContent = productData["discount%"] + "% OFF";
+    discountPercentage.textContent = productData["discountPercentage"] + "% OFF";
     discountPercentage.className = "discountPercentage"
 
     priceAndDiscount.append(discountedPrice, mrp, discountPercentage);
@@ -81,7 +84,7 @@ function createProductCard(productData, cardVersion) {
 
     const mrp = document.createElement("div");
     const discountedPriceValue = productData.price;
-    const discountedPercentage = productData["discount%"];
+    const discountedPercentage = productData["discountPercentage"];
     const mrpValue = Math.round(
       discountedPriceValue / (1 - discountedPercentage / 100)
     );
@@ -92,6 +95,9 @@ function createProductCard(productData, cardVersion) {
     const material = document.createElement("div");
     material.textContent = "Material: " + productData.material;
     card.appendChild(material);
+
+    const addToCartBtn = addToCartButton(productData.id)
+    card.appendChild(addToCartBtn);
   }
 
   return card;

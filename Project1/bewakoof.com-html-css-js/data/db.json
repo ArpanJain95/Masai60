@@ -38,16 +38,19 @@
     {
       "id": 1,
       "name": "MEN",
+      "category": "Men",
       "url": "./products.html"
     },
     {
       "id": 2,
       "name": "WOMEN",
+      "category": "Women",
       "url": "./products.html"
     },
     {
       "id": 3,
       "name": "MOBILE COVERS",
+      "category": "mobileCovers",
       "url": "./products.html"
     }
   ],
@@ -281,7 +284,7 @@
       "category": "Oversized Fit",
       "color": "Black",
       "rating": "4.6",
-      "discount%": 60,
+      "discountPercentage": 60,
       "price": 519,
       "material": "100% Cotton",
       "size": [
@@ -309,7 +312,7 @@
       "category": "Oversized Fit",
       "color": "White",
       "rating": "4.5",
-      "discount%": 62,
+      "discountPercentage": 62,
       "price": 599,
       "material": "100% Cotton",
       "size": [
@@ -335,7 +338,7 @@
       "category": "Oversized Fit",
       "color": "Black",
       "rating": "4.6",
-      "discount%": 61,
+      "discountPercentage": 61,
       "price": 479,
       "material": "100% Cotton",
       "size": [
@@ -362,7 +365,7 @@
       "category": "Oversized Fit",
       "color": "Blue",
       "rating": "4.8",
-      "discount%": 56,
+      "discountPercentage": 56,
       "price": 649,
       "material": "100% Cotton",
       "size": [
@@ -384,13 +387,13 @@
     },
     {
       "id": 5,
-      "name": "",
+      "name": "Stay Hydrated",
       "officialCate": "BEWAKOOF",
       "gender": "Women",
       "category": "Oversized Dress",
       "color": "Grey",
       "rating": "4.5",
-      "discount%": 58,
+      "discountPercentage": 58,
       "price": 534,
       "material": "THICK PREMIUM FABRIC",
       "size": [
@@ -417,7 +420,7 @@
       "category": "Oversized Dress",
       "color": "Brown",
       "rating": "5",
-      "discount%": 43,
+      "discountPercentage": 43,
       "price": 1049,
       "material": "100% Cotton",
       "size": [
@@ -440,7 +443,7 @@
       "category": "Fit Co-ordinates",
       "color": "Orange",
       "rating": "4.5",
-      "discount%": 50,
+      "discountPercentage": 50,
       "price": 1499,
       "size": [
         "XS",
@@ -460,13 +463,13 @@
     },
     {
       "id": 8,
-      "name": "",
+      "name": "Stay Hydrated Back",
       "officialCate": "BEWAKOOF",
       "gender": "Men",
       "category": "T-Shirts",
       "color": "White",
       "rating": "4",
-      "discount%": 50,
+      "discountPercentage": 50,
       "price": 499,
       "material": "100% Cotton",
       "size": [
@@ -486,13 +489,13 @@
     },
     {
       "id": 9,
-      "name": "",
+      "name": "Smashed It",
       "officialCate": "BEWAKOOF HEAVY DUTY 1.0",
       "gender": "Women",
       "category": "Super Loose Fit Joggers",
       "color": "Green",
       "rating": "4.4",
-      "discount%": 45,
+      "discountPercentage": 45,
       "price": 999,
       "material": "THICK PREMIUM FABRIC",
       "size": [
@@ -518,7 +521,7 @@
       "category": "Oversized Fit",
       "color": "Pink",
       "rating": "4.6",
-      "discount%": 57,
+      "discountPercentage": 57,
       "price": 599,
       "material": "SLUB JERSEY FABRIC",
       "size": [
@@ -545,7 +548,7 @@
       "category": "Oversized Co-ordinates",
       "color": "Brown",
       "rating": "4.4",
-      "discount%": 56,
+      "discountPercentage": 56,
       "price": 1524,
       "size": [
         "S",
@@ -571,7 +574,7 @@
       "category": "Oversized Dress",
       "color": "Black",
       "rating": "4",
-      "discount%": 54,
+      "discountPercentage": 54,
       "price": 699,
       "material": "THICK PREMIUM FABRIC",
       "size": [
@@ -589,13 +592,13 @@
     },
     {
       "id": 13,
-      "name": "",
+      "name": "Smashed It",
       "officialCate": "BEWAKOOF",
       "gender": "Women",
       "category": "Oversized Dress",
       "color": "Pink",
       "rating": "4.9",
-      "discount%": 67,
+      "discountPercentage": 67,
       "price": 449,
       "material": "THICK PREMIUM FABRIC",
       "size": [
@@ -616,7 +619,7 @@
       "category": "Oversized Shirt",
       "color": "Blue",
       "rating": "4.6",
-      "discount%": 45,
+      "discountPercentage": 45,
       "price": 899,
       "material": "FINE TEXTURE FABRIC",
       "size": [
@@ -642,7 +645,7 @@
       "category": "Oversized Fit",
       "color": "Black and Grey",
       "rating": "4.5",
-      "discount%": 50,
+      "discountPercentage": 50,
       "price": 799,
       "size": [
         "XS",
@@ -663,11 +666,11 @@
       "id": 16,
       "name": "Lead Typography",
       "officialCate": "BEWAKOOF",
-      "gender": "Women",
+      "gender": "Men",
       "category": "Oversized Shirt",
       "color": "White",
       "rating": "5",
-      "discount%": 50,
+      "discountPercentage": 50,
       "price": 799,
       "material": "100% Cotton",
       "size": [
@@ -693,7 +696,21 @@
       "mobileNo": "9876543211",
       "emailID": "binod@khalbalipur.com",
       "password": "binod@123",
-      "receiveUpdates": "on"
+      "receiveUpdates": "on",
+      "cart": [
+        {
+          "orderId": 8,
+          "quantity": "1"
+        },
+        {
+          "orderId": 2,
+          "quantity": "1"
+        },
+        {
+          "orderId": 1,
+          "quantity": "3"
+        }
+      ]
     },
     {
       "id": 2,
@@ -701,7 +718,17 @@
       "mobileNo": "1123456789",
       "emailID": "raju@25dinmedouble.com",
       "password": "raju@420",
-      "receiveUpdates": "on"
+      "receiveUpdates": "on",
+      "cart": [
+        {
+          "orderId": 14,
+          "quantity": 1
+        },
+        {
+          "orderId": 11,
+          "quantity": 2
+        }
+      ]
     },
     {
       "name": "ashish",
@@ -710,6 +737,14 @@
       "password": "1234567899",
       "receiveUpdates": "on",
       "id": 3
+    },
+    {
+      "name": "Test0",
+      "mobileNo": "0000000000",
+      "emailID": "test0@gmail.com",
+      "password": "test0",
+      "receiveUpdates": "on",
+      "id": 4
     }
   ]
 }

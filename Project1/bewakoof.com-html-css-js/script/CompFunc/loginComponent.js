@@ -117,8 +117,14 @@ function openOTPPopup(userlogingin) {
               user: userlogingin
             };
             localStorage.setItem("userToken", JSON.stringify(userToken));
-            window.location.href = "index.html";
-            console.log("Entered OTP", enteredOTP, "is correct");
+
+            const redirectUrl = localStorage.getItem("redirectAfterLogin");
+            if(redirectUrl) {
+              window.location.href = redirectUrl
+              localStorage.removeItem("redirectAfterLogin")
+            } else {
+              window.location.href = "index.html";
+            }
             otp = undefined;
           } else {
             console.log("wrong otp");
