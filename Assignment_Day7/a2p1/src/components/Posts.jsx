@@ -14,7 +14,7 @@ function Posts() {
     try {
       let res = await axios({
         method: "get",
-        url: `https://reqres.in/api/posts`,
+        url: `https://jsonplaceholder.typicode.com/posts`,
       });
       console.log(res?.data?.data);
       setPosts(res?.data?.data)
